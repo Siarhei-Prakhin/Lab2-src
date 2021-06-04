@@ -19,12 +19,6 @@ services:
     depends_on:
           - mysql
     restart: always
-    environment:
-      DB_HOST: mysql
-      DB_NAME: wordpress
-      DB_USER: wp-user
-      DB_PASSWORD: wp-pass
-      
     volumes:
      - ./data/html:/var/www/html
      - ./data/conf.d:/usr/local/etc/php/conf.d 
