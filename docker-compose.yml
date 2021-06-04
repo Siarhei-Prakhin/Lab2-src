@@ -20,13 +20,11 @@ services:
           - mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 12345
       DB_HOST: mysql
       DB_NAME: wordpress
       DB_USER: wp-user
       DB_PASSWORD: wp-pass
-      WORDPRESS_TABLE_PREFIX: wp_
-
+      
     volumes:
      - ./data/html:/var/www/html
      - ./data/conf.d:/usr/local/etc/php/conf.d 
